@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EvoPixel — Seu Site, Pronto Para Converter</title>
+  <meta name="description" content="Criamos sites e landing pages sob medida para o seu negócio, rápidos, bonitos e feitos para transformar visitantes em clientes.">
+  
+  <!-- Google Fonts: Instrument Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  
+  <!-- OGL WebGL Engine -->
+  <script src="public/ogl.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <!-- Fixed Background Canvas -->
+  <div class="canvas-container">
+    <canvas id="hero-canvas"></canvas>
+    <div class="canvas-ambient-overlay"></div>
+  </div>
+
+  <!-- Main Scrollable Content Overlay -->
+  <div class="scroll-content">
+    
+    <!-- Top Right Meta Tag -->
+    <div class="top-meta-tags">
+      <span>SITES</span>
+      <span>LANDING PAGES</span>
+      <span>AUTOMAÇÃO</span>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="public/logo.webp" alt="EvoPixel" class="site-logo-img">
+        </a>
+
+
+        <nav class="nav-pill">
+          <a href="#" class="nav-link active">Início</a>
+          <a href="#services" class="nav-link">Serviços</a>
+          <a href="#about" class="nav-link">Portfólio</a>
+          <a href="#about" class="nav-link">Sobre</a>
+          <a href="#location" class="nav-link">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-left">
+          <div class="badge-pill">
+            <span class="badge-spark">✦</span>
+            <span>Design & Automação</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Seu Site, <span class="floating-note">Do briefing<br>ao ar</span><br>
+            Pronto Para<br>
+            <span class="text-highlight">Converter</span>
+          </h1>
+
+          <p class="hero-description">
+            Do briefing ao lançamento, criamos sites e landing pages sob medida para o seu negócio, rápidos, bonitos e feitos para transformar visitantes em clientes.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#about" class="btn btn-dark-pill">Ver Portfólio</a>
+            <a href="https://wa.me/" target="_blank" class="btn btn-red-pill">Falar no WhatsApp</a>
+          </div>
+
+          <!-- Hero Metrics Cards Row -->
+          <div class="metrics-row">
+            <div class="metric-card">
+              <span class="metric-label">Clientes satisfeitos</span>
+              <div class="metric-val-group">
+                <span class="metric-num count-up" data-target="150" data-suffix="+">0+</span>
+              </div>
+            </div>
+
+
+            <div class="metric-card">
+              <span class="metric-label">Melhoria em ROI</span>
+              <span class="metric-num count-up" data-target="95" data-suffix="%">0%</span>
+            </div>
+
+            <div class="metric-card">
+              <span class="metric-label">Retenção de clientes</span>
+              <span class="metric-num count-up" data-target="88" data-suffix="%">0%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Manifesto / About Section -->
+    <section class="manifesto-section" id="about">
+      <div class="manifesto-container">
+        <div class="badge-pill">
+          <span class="badge-spark">✦</span>
+          <span>Sobre Nós</span>
+        </div>
+
+        <h2 class="manifesto-statement">
+          Nós <span class="highlight-red">criamos</span> e lançamos <span class="highlight-red">sites estratégicos</span> com as pessoas no centro, garantindo que cada <span class="highlight-red">projeto amplie</span> experiências reais dos usuários.
+        </h2>
+      </div>
+    </section>
+
+    <!-- Location & Trust Grid Section -->
+    <section class="location-section" id="location">
+      <div class="grid-layout">
+        
+        <!-- Left Location Card -->
+        <div class="glass-card location-card">
+          <div class="badge-pill">
+            <span class="badge-spark">✦</span>
+            <span>Disponível para todo o Brasil</span>
+          </div>
+
+          <h3 class="card-heading">Baseado no <span class="highlight-red">Acre, Brasil</span></h3>
+          <a href="https://wa.me/" target="_blank" class="btn btn-dark-sm">Iniciar Projeto</a>
+
+          <div class="media-container">
+            <img src="public/studio_team.png" alt="Equipe de criação EvoPixel" class="studio-img">
+            <div class="media-overlay-red"></div>
+          </div>
+        </div>
+
+        <!-- Right Column Stack -->
+        <div class="right-stack">
+          
+          <!-- Clients Trust Card -->
+          <div class="glass-card trust-card">
+            <p class="trust-subtitle">
+              Confiança de 30+ clientes em 3 nichos diferentes — do briefing ao lançamento em 2 a 4 semanas.
+            </p>
+            <div class="rating-stars">★★★★★</div>
+            <div class="trust-stat-num count-up" data-target="30" data-suffix="+">0+</div>
+          </div>
+
+
+          <!-- Testimonial Card -->
+          <div class="glass-card testimonial-card">
+            <div class="testimonial-content">
+              <img src="public/testimonial_avatar.png" alt="Jauile Rodrigues" class="author-avatar">
+              <div class="quote-block">
+                <span class="quote-mark">“</span>
+                <p class="quote-text">Bom design parece simples — porque o trabalho duro fica escondido.</p>
+                <span class="quote-author"><strong>Jauile Rodrigues</strong> | Cliente EvoPixel</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Professional Tools Infinite Marquee -->
+    <section class="brands-marquee-section">
+      <div class="brands-header">
+        <span>TECNOLOGIAS & FERRAMENTAS PROFISSIONAIS</span>
+      </div>
+      
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <!-- Set 1 -->
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 38 57"><path fill="currentColor" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="currentColor" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="currentColor" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="currentColor" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="currentColor" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg>
+            <span>Figma</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-3 16H7V8h2v8zm8 0h-6v-2h6v2zm0-4h-6v-2h6v2zm0-4h-6V8h6v2z"/></svg>
+            <span>Elementor</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <span>Antigravity</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.376 0 0 5.376 0 12c0 6.624 5.376 12 12 12 6.624 0 12-5.376 12-12C24 5.376 18.624 0 12 0zm0 22.5A10.5 10.5 0 1 1 22.5 12 10.512 10.512 0 0 1 12 22.5zM3.447 12c0 1.94.62 3.737 1.674 5.201l4.982-13.655A10.428 10.428 0 0 0 3.447 12zm13.693 5.095c.877-1.282 1.39-2.828 1.39-4.495 0-2.33-.996-4.428-2.585-5.902l3.411 11.23a10.42 10.42 0 0 1-2.216.833zm-4.707.905l3.298-10.73h-1.579l-2.029 6.602-2.1-6.602H8.384l3.25 10.73z"/></svg>
+            <span>WordPress</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 512 512"><path fill="currentColor" d="M256 48L512 464H0L256 48Z"/></svg>
+            <span>Vercel</span>
+          </div>
+
+          <!-- Set 2 (Duplicate for Seamless Loop) -->
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 38 57"><path fill="currentColor" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="currentColor" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="currentColor" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="currentColor" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="currentColor" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg>
+            <span>Figma</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-3 16H7V8h2v8zm8 0h-6v-2h6v2zm0-4h-6v-2h6v2zm0-4h-6V8h6v2z"/></svg>
+            <span>Elementor</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <span>Antigravity</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.376 0 0 5.376 0 12c0 6.624 5.376 12 12 12 6.624 0 12-5.376 12-12C24 5.376 18.624 0 12 0zm0 22.5A10.5 10.5 0 1 1 22.5 12 10.512 10.512 0 0 1 12 22.5zM3.447 12c0 1.94.62 3.737 1.674 5.201l4.982-13.655A10.428 10.428 0 0 0 3.447 12zm13.693 5.095c.877-1.282 1.39-2.828 1.39-4.495 0-2.33-.996-4.428-2.585-5.902l3.411 11.23a10.42 10.42 0 0 1-2.216.833zm-4.707.905l3.298-10.73h-1.579l-2.029 6.602-2.1-6.602H8.384l3.25 10.73z"/></svg>
+            <span>WordPress</span>
+          </div>
+
+          <div class="brand-item">
+            <svg class="brand-icon" viewBox="0 0 512 512"><path fill="currentColor" d="M256 48L512 464H0L256 48Z"/></svg>
+            <span>Vercel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Services Section (Conforme Anexo 2) -->
+    <section class="services-section" id="services">
+      <div class="services-grid">
+        
+        <div class="services-left">
+          <div class="badge-pill">
+            <span class="badge-spark">✦</span>
+            <span>Serviços</span>
+          </div>
+
+          <h2 class="services-title">Serviços de<br>Web Design</h2>
+          <p class="services-desc">
+            Transformamos ideias soltas em páginas que geram resultado real — unindo estratégia, design, copy persuasiva e testes de conversão.
+          </p>
+        </div>
+
+        <div class="services-cards-grid">
+          
+          <!-- Card 01 -->
+          <div class="glass-card service-card">
+            <div class="service-card-top">
+              <h3>Criação de Landing Pages</h3>
+              <span class="service-num">(01)</span>
+            </div>
+            <p class="service-card-desc">Desenvolvimento de páginas de alta conversão, rápidas, responsivas e otimizadas para transformar visitantes em clientes.</p>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="glass-card service-card">
+            <div class="service-card-top">
+              <h3>E-commerce</h3>
+              <span class="service-num">(02)</span>
+            </div>
+            <p class="service-card-desc">Lojas virtuais completas, seguras e intuitivas para vender seus produtos de forma automática 24 horas por dia.</p>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="glass-card service-card">
+            <div class="service-card-top">
+              <h3>Automações</h3>
+              <span class="service-num">(03)</span>
+            </div>
+            <p class="service-card-desc">Integração de processos, lead tracking e fluxos automatizados no WhatsApp e CRM para multiplicar sua produtividade.</p>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="glass-card service-card">
+            <div class="service-card-top">
+              <h3>Ensaio Profissional com IA</h3>
+              <span class="service-num">(04)</span>
+            </div>
+            <p class="service-card-desc">Fotos corporativas e ensaios de marca ultra-realistas com inteligência artificial para elevar sua autoridade visual.</p>
+          </div>
+
+          <!-- Card 05 -->
+          <div class="glass-card service-card">
+            <div class="service-card-top">
+              <h3>Google Meu Negócio</h3>
+              <span class="service-num">(05)</span>
+            </div>
+            <p class="service-card-desc">Otimização e configuração completa do seu perfil no Google para atração de clientes locais e topo das pesquisas da sua região.</p>
+          </div>
+
+          <!-- Card 06 -->
+          <div class="glass-card service-card">
+            <div class="service-card-top">
+              <h3>Site Institucional</h3>
+              <span class="service-num">(06)</span>
+            </div>
+            <p class="service-card-desc">Desenvolvimento de sites corporativos completos, multi-páginas, estruturados para transmitir máxima credibilidade e autoridade de marca.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- FAQ Section (UX/UI Accordion) -->
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        
+        <div class="faq-header">
+          <div class="badge-pill">
+            <span class="badge-spark">✦</span>
+            <span>Dúvidas Frequentes</span>
+          </div>
+
+          <h2 class="faq-title">Perguntas <span class="highlight-red">Frequentes</span></h2>
+          <p class="faq-subtitle">
+            Tudo o que você precisa saber sobre o processo de criação, prazos, suporte, hospedagem e automação com IA.
+          </p>
+        </div>
+
+        <div class="faq-accordion-list">
+          
+          <!-- Item 01 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-1">
+              <div class="faq-question-wrap">
+                <span class="faq-num">01</span>
+                <span class="faq-question">Posso pedir alterações no projeto?</span>
+              </div>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-1">
+              <div class="faq-body">
+                Claro. Entendo que ajustes fazem parte do processo pra ficar do jeito que você imaginou. Incluo um período de revisão com até 3 rodadas de mudanças no valor combinado.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 02 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-2">
+              <div class="faq-question-wrap">
+                <span class="faq-num">02</span>
+                <span class="faq-question">Você dá suporte depois que o site fica pronto?</span>
+              </div>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-2">
+              <div class="faq-body">
+                Sim. Ofereço 30 dias de suporte gratuito após a entrega, pra corrigir qualquer detalhe ou responder dúvidas que apareçam quando o site já estiver no ar.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 03 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3">
+              <div class="faq-question-wrap">
+                <span class="faq-num">03</span>
+                <span class="faq-question">Domínio e hospedagem estão inclusos?</span>
+              </div>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-3">
+              <div class="faq-body">
+                Não, esses dois ficam no seu nome (CPF ou CNPJ), já que são seus e não meus. Mas te indico os melhores provedores e já deixo tudo configurado pra você.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 04 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-4">
+              <div class="faq-question-wrap">
+                <span class="faq-num">04</span>
+                <span class="faq-question">Quanto tempo leva pra ficar pronto?</span>
+              </div>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-4">
+              <div class="faq-body">
+                Depende do projeto, mas a maioria sai entre 7 e 15 dias úteis após o briefing — landing pages simples ficam prontas mais rápido, sites com mais páginas levam um pouco mais.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 05 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-5">
+              <div class="faq-question-wrap">
+                <span class="faq-num">05</span>
+                <span class="faq-question">Você atende qualquer tipo de negócio?</span>
+              </div>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-5">
+              <div class="faq-body">
+                Trabalho principalmente com advogados e profissionais liberais que precisam de uma presença online que gere confiança e traga cliente, mas também atendo outros nichos caso o projeto faça sentido.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 06 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-6">
+              <div class="faq-question-wrap">
+                <span class="faq-num">06</span>
+                <span class="faq-question">O que é a automação com IA que você oferece?</span>
+              </div>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-6">
+              <div class="faq-body">
+                É um agente de atendimento no seu WhatsApp que responde os primeiros contatos, tira dúvidas comuns e já direciona o cliente pra agendar ou fechar com você — sem você precisar estar online o dia todo.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 07 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-7">
+              <div class="faq-question-wrap">
+                <span class="faq-num">07</span>
+                <span class="faq-question">Preciso ter site pra contratar a automação?</span>
+              </div>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-7">
+              <div class="faq-body">
+                Não, a automação vai variar da necessidade do seu negócio, seja chat bot para whatsapp até projetos mais complexos.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FAQ CTA Box -->
+        <div class="faq-cta-box">
+          <div class="faq-cta-info">
+            <h4>Ainda tem alguma dúvida?</h4>
+            <p>Fale diretamente comigo para tirar qualquer questão e iniciar seu projeto.</p>
+          </div>
+          <a href="https://wa.me/" target="_blank" class="btn btn-red-pill">Tirar dúvidas no WhatsApp</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>© 2026 EvoPixel. Todos os direitos reservados. Design & Automação Web sob medida.</p>
+    </footer>
+
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
