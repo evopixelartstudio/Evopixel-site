@@ -308,31 +308,67 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // FAQ Accordion Interactivity
+  // FAQ Accordion Interactivity with Motion
   function initFaqAccordion() {
     const faqTriggers = document.querySelectorAll('.faq-trigger');
-    
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    // Extract Motion API (Motion One / Motion 11)
+    const MotionObj = window.Motion || window.MotionOne || {};
+    const animate = MotionObj.animate;
+    const inView = MotionObj.inView;
+    const stagger = MotionObj.stagger;
+    const spring = MotionObj.spring;
+
+    // 1. Motion Scroll Entrance Animation for FAQ Items
+    if (inView && faqItems.length) {
+      inView('.faq-section', () => {
+        if (animate) {
+          animate('.faq-item', 
+            { opacity: [0, 1], y: [35, 0], scale: [0.98, 1] }, 
+            { delay: stagger ? stagger(0.08) : 0.08, duration: 0.6, easing: [0.16, 1, 0.3, 1] }
+          );
+        }
+      });
+    }
+
     faqTriggers.forEach((trigger) => {
       trigger.addEventListener('click', () => {
         const item = trigger.closest('.faq-item');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
         const isOpen = item.classList.contains('active');
 
-        // Close all other active items for clean single-accordion UX
+        // Close all other active items
         document.querySelectorAll('.faq-item.active').forEach((activeItem) => {
           if (activeItem !== item) {
             activeItem.classList.remove('active');
             const activeBtn = activeItem.querySelector('.faq-trigger');
+            const activeIcon = activeItem.querySelector('.faq-icon');
             if (activeBtn) activeBtn.setAttribute('aria-expanded', 'false');
+            if (animate && activeIcon) {
+              animate(activeIcon, { rotate: 0 }, { duration: 0.3, easing: 'ease-out' });
+            }
           }
         });
 
-        // Toggle current item
+        // Toggle current item with Motion animations
         if (isOpen) {
           item.classList.remove('active');
           trigger.setAttribute('aria-expanded', 'false');
+          if (animate && icon) {
+            animate(icon, { rotate: 0 }, { duration: 0.3, easing: 'ease-out' });
+          }
         } else {
           item.classList.add('active');
           trigger.setAttribute('aria-expanded', 'true');
+          if (animate && icon) {
+            const easeOption = spring ? spring({ stiffness: 300, damping: 20 }) : 'ease-out';
+            animate(icon, { rotate: 180 }, { duration: 0.45, easing: easeOption });
+          }
+          if (animate && content) {
+            animate(content, { scale: [0.98, 1], opacity: [0, 1] }, { duration: 0.35, easing: [0.16, 1, 0.3, 1] });
+          }
         }
       });
     });
@@ -403,6 +439,67 @@ document.addEventListener('DOMContentLoaded', () => {
     countElements.forEach((el) => observer.observe(el));
   }
 
+  // Services Carousel Controls
+  function initServicesCarousel() {
+    const track = document.getElementById('services-track');
+    const prevBtn = document.getElementById('services-prev');
+    const nextBtn = document.getElementById('services-next');
+
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const scrollAmount = 340; // card width + gap
+
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  }
+
+  // Lenis Smooth Scroll Integration
+  function initLenis() {
+    const LenisClass = window.Lenis;
+    if (!LenisClass) return;
+
+    const lenis = new LenisClass({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      smoothTouch: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Sync Canvas Target Frame on Lenis Smooth Scroll
+    lenis.on('scroll', () => {
+      updateScrollTarget();
+    });
+
+    // Smooth wheel scroll integration on services carousel track
+    const track = document.getElementById('services-track');
+    if (track) {
+      track.addEventListener('wheel', (e) => {
+        if (e.deltaY !== 0 && Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
+          const canScrollLeft = track.scrollLeft > 0;
+          const canScrollRight = track.scrollLeft < (track.scrollWidth - track.clientWidth - 1);
+          
+          if ((e.deltaY > 0 && canScrollRight) || (e.deltaY < 0 && canScrollLeft)) {
+            e.preventDefault();
+            track.scrollBy({ left: e.deltaY * 1.5, behavior: 'smooth' });
+          }
+        }
+      }, { passive: false });
+    }
+
+    window.lenisInstance = lenis;
+  }
+
   // Event Listeners
   window.addEventListener('resize', () => {
     resizeCanvas();
@@ -419,6 +516,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initOglButtons();
   initBorderGlowEffect();
   initCountUpAnimation();
+  initServicesCarousel();
+  initLenis();
 });
 
 

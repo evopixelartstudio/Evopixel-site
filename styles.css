@@ -824,19 +824,21 @@ body {
 }
 
 
-/* Services Section (Anexo 2 Layout) */
+/* Services Section (Sticky Stacked Cards List Layout) */
 .services-section {
-  padding: 8rem 0 4rem;
+  padding: 8rem 0 6rem;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 3.5rem;
+  grid-template-columns: 360px 1fr;
+  gap: 4rem;
   align-items: flex-start;
 }
 
 .services-left {
+  position: sticky;
+  top: 120px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -850,7 +852,6 @@ body {
   letter-spacing: -0.055em;
 }
 
-
 .services-desc {
   font-size: 1rem;
   color: var(--text-secondary);
@@ -858,28 +859,36 @@ body {
   line-height: 1.6;
 }
 
-.services-cards-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+.services-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 4rem;
+  position: relative;
 }
 
 .service-card {
+  position: sticky;
+  top: calc(120px + (var(--card-index, 1) - 1) * 22px);
+  z-index: var(--card-index, 1);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  padding: 1.5rem;
-  background: var(--glass-card-bg);
+  gap: 1.25rem;
+  padding: 2.25rem 2rem;
+  background: rgba(18, 20, 28, 0.88);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-card);
-  backdrop-filter: blur(20px);
-  transition: var(--transition);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5), 0 20px 48px rgba(0, 0, 0, 0.7);
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
 }
 
 .service-card:hover {
   border-color: var(--glass-border-hover);
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -10px 30px var(--accent-red-glow), 0 24px 56px rgba(0, 0, 0, 0.85);
 }
 
 .service-card-top {
@@ -891,14 +900,14 @@ body {
 
 .service-card-top h3 {
   font-family: 'Instrument Sans', -apple-system, sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-primary);
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 .service-num {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
   font-family: 'Instrument Sans', -apple-system, sans-serif;
   opacity: 0.7;
@@ -906,14 +915,25 @@ body {
 }
 
 .service-card-desc {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 @media (max-width: 900px) {
-  .services-cards-grid {
+  .services-grid {
     grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .services-left {
+    position: relative;
+    top: 0;
+  }
+
+  .service-card {
+    position: relative;
+    top: 0 !important;
   }
 }
 
@@ -1109,4 +1129,21 @@ body {
   .metrics-row {
     grid-template-columns: 1fr;
   }
+}
+
+/* Footer Section */
+.site-footer {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.site-footer p {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0 auto;
 }
